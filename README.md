@@ -4,4 +4,5 @@ Repository contains all the assignments I completed throughout CS1010 - Introduc
 https://www.scss.tcd.ie/modules/?m=CS1010
 
 Status: Module Completed
+
 Grade: First Class Honours
