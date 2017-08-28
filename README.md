@@ -10,9 +10,10 @@ Grade: First Class Honours
 
 ### To Current TCD CS First Year Students
 
-If you are a current first year TCD CS student reading this, please avoid copying any of this work.
+Please avoid copying any of this work, you are only cheating yourself by not completing the assignments on your own.
 
-It is much more beneficial to try these assignments yourself, especially for your exams in June.
+It is much more beneficial to try these assignments yourself, especially for your exams throughout the course of the year
+and for your future career in this sector.
 
 -Conor
 
