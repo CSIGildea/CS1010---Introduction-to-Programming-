@@ -1,0 +1,52 @@
+Climbing Club Harness Record System
+
+A climbing club has a collection of climbing harnesses, each of which can be loaned to members of the club for use on a climbing wall. Each climbing harness has the following characteristics: make (e.g. PETZL), model number (e.g. 4576), number of times used value (e.g. 0), name of the club climbing instructor who last checked the safety of the harness (e.g. John Simpson), whether or not the harness is currently on loan to climbing club member (e.g. true), and the name of the club member who borrowed the harness if it is on loan (e.g. Jennifer Maguire). The climbing club only purchases new harnesses, i.e., new harnesses have never been used before. Additionally, a club climbing instructor always double checks the safety of each new harness.
+
+A climbing club member can borrow a harness to use if one is available. Each time a harness is used, its number of times used value is incremented by one. If a harness have been used 25 times (or more) it cannot be borrowed again by a member of the club until it is physically checked for safety by a climbing instructor. Once a climbing instructor checks the safety of a harness its number of times used value is reset to zero and the name of the climbing instructor who checked the harness for safety is also recorded. If the climbing instructor finds that the harness is not safe for use by club members then the harness is removed from the club.
+
+Design a Harness data type (Java class) whose values (Java objects) represent climbing club harnesses. Your data type must store the above harness characteristics and must provide at least the following operations (Java instance methods):
+(1) a constructor which takes the make, the model number, the number of times the harness was used, the name of the climbing instructor who last checked the safety of the harness, whether the harness is on loan, and if the harness is on loan the name of club member who has it borrowed. The constructor creates a Harness value with the given characteristics.
+
+(2) a constructor which takes the make, the model number, and the name of the climbing instructor who checked the safety of the harness, and which creates a Harness value with the given characteristics and the other characteristics to sensible initial values.  
+
+(3) checkHarness which takes the name of a climbing instructor and which resets the number of times used value of this harness and records the name of the safety checking instructor, assuming that this harness is not currently on out on loan, otherwise this operation has no effect.
+
+(4) isHarnessOnLoan which determines whether this harness is currently loaned out to a climbing club member.
+
+(5) canHarnessBeLoaned which determines whether this harness can be loaned out to a climbing club member.
+
+(6) loanHarness which takes the name of a climbing club member and which loans this harness to the club member, assuming that this harness can be loaned, otherwise the operation has no effect.  
+
+(7) returnHarness which updates this harness characteristics to record the fact that the harness has been returned by a climbing club member, assuming that the harness was on loan. If the harness was not on loan the operation has no effect.
+
+(8) toString which return a String value description of this harness.
+
+Design a HarnessRecords data type (Java class) whose values (Java objects) represent the collection of harnesses owned by climbing club, that is, the current characteristics of each harness owned by a climbing club. Your data type must store a list of Harness values (using either an array or an ArrayList) and must provide at least the following operations (Java instance methods):
+(1) a constructor which constructs an empty HarnessRecords value, that is, a HarnessRecords value which does not contain any Harness values.
+
+(2) a constructor which takes an input stream containing the number of harness contained in the stream follow by characteristics values for each harness. The constructor creates a HarnessRecords value containing a Harness value for each one in the input stream.
+
+(3) isEmpty which determiners whether this collection of harness records is empty,  that is, does not contain any Harness values.
+
+(4) addHarness which takes a Harness value to add to the list of currently of currently recorded climbing club harnesses.
+
+(5) findHarness which takes a harness make and model number, and which finds and returns the harness with given make and model number, assuming that such a harness exists in list of currently recorded climbing club harnesses, otherwise the operation returns the null value.
+
+(6) checkHarness which takes an instructor name, a harness make and model number, and which updates the characteristics of this particular harness to reflect the fact that the given instructor has safety checked the harness, assuming the harness exists and is currently not on loan. If a harness is updated it is returned by the operation, otherwise the operation has no effect and      returns the null value.
+
+(7) loanHarness which takes the name of a climbing club member and which tries to find an available harness for them to use. If a usable harness is found its characteristics are updated and the harness is returned, otherwise the operation has no effect and returns the null value.
+
+(8) returnHarness which takes the make and model number of a harness, which should be currently on loan to a club member, and which finds and updates the  characteristics of that particular harness, assuming that such a harness exists. If a harness is found and updated it is returned by the operation,  otherwise the operation has no effect and returns the null value.
+
+(9) removeHarness which takes the make and model number of a harness, and which finds and removes the harness from the list of currently recorded climbing club harnesses, assuming that such a harness exists. If a harness is found and removed it is returned by the operation, otherwise the operation has no effect and returns the null value.
+
+Write a Java program which will allow a user (the climbing club manager) to keep track of and update the current characteristics of each climbing club harness through a user interface (text based or otherwise). The user interface must at least allow the climbing club manager to:
+(1) add a record for a newly purchased harness,
+
+(2) remove a climbing harness from the club,
+
+(3) record the fact that a club instructor has checked the safety of a harness,
+
+(4) loan a harness to a club member if there is an availabe harness,  
+
+(5) return a harness which is no longer in use by a club member.

@@ -1,0 +1,31 @@
+Connect Four Two-Player Connection Game
+
+Connect Four is a two-player connection game in which the players first choose a disc colour (red or yellow) and then take turns dropping their coloured discs from the top into a seven-column, six-row vertically suspended grid. The pieces fall straight down, occupying the next available space within the gird column, i.e., the coloured disc falls down the vertical grid column until it  land on the bottom of the vertical grid or on top of another colour disc.
+The objective of the game is to connect four of one's own discs of the same colour next to each other vertically, horizontally, or diagonally before your opponent.
+
+Write a Java program which implements the Connect Four two-player connection game. Your program must allow a user to choose the type of each player involved in the Connect Four game, either a Human Player (a user) or a Random AI Player (a computer). A Human Player will be prompted (asked) by the game for their choice of grid column to drop their disc into on each of their turns. A Random AI Player will always select a non-full gird column at random to drop its disc into on each of its turns. Your solution must use the following classes and interface which you have to design and implement:
+Connect4Game class
+
+A class whose objects represent an executing Connect Four two-player game application. The class will allow a user to start a new Connect Four game involving two players whose types are chosen by the user. This class consists of a mainline which handles user input. The class creates a grid using the connect4Grid interface and a human player and a computer player using the player abstract class.
+Connect4Grid interface
+
+An interface with the following (abstract) methods:
+public void emptyGrid();
+public String toString();
+public boolean isValidColumn(int column);
+public boolean isColumnFull(int column);
+public void dropPiece(ConnectPlayer player, int column);
+public boolean didLastPieceConnect4();
+public boolean isGridFull();   
+
+Connect4Grid2DArray class 
+This class implements the Connect4Grid interface and provides appropriate functionality for each of the methods in the interface
+
+ConnectPlayer abstract class
+An abstract class that provides the operations (methods) which any type of Connect Four Player class must override.
+
+C4HumanPlayer class
+A class which extends the ConnectPlayer abstract class and whose objects represent a human player (a user) who is involved in a Connect Four game.
+
+C4RandomAIPlayer class
+A class which extends the ConnectPlayer abstract class and whose objects represent Random AI Player (a computer) which is involved in a Connect Four game.
