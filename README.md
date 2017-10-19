@@ -1,4 +1,4 @@
-# Conor Gildea - CS1010 - Introduction to Programming Assignments
+# Conor Gildea - Introduction to Programming Assignments
 <img src=https://www.tcd.ie/medicine/assets/img/TCD-logo-home.jpg>
 Repository contains all the assignments I completed throughout CS1010 - Introduction to Programming at TCD.
 
